@@ -13,7 +13,6 @@ use Auth;
 
 class HomeController extends Controller
 {
-
     public function __construct()
     {
         $this->middleware('auth');
@@ -86,10 +85,22 @@ class HomeController extends Controller
 
         ->filter(function($data) use ($request) 
         {
-            // if ($request->has('name')) 
-            // {
-            //     $data->where('name', 'like', '%'.$request->get('name').'%');
-            // }
+            if ($request->has('search_firstname')) 
+            {
+                $data->where('firstname', 'like', '%'.$request->get('search_firstname').'%');
+            }
+            if ($request->has('search_lastname')) 
+            {
+                $data->where('lastname', 'like', '%'.$request->get('search_lastname').'%');
+            }
+            if ($request->has('search_email')) 
+            {
+                $data->where('email', 'like', '%'.$request->get('search_email').'%');
+            }
+            if ($request->has('search_phonenumber')) 
+            {
+                $data->where('phonenumber', 'like', '%'.$request->get('search_phonenumber').'%');
+            }
         })
         ->addColumn('full_name', function ($data)
         {

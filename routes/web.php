@@ -20,3 +20,7 @@ Route::post('/member/create', 'HomeController@create');
 Route::post('/member/update', 'HomeController@update');
 Route::get('/member/edit/{id}', 'HomeController@edit');
 Route::get('/member/delete/{id}', 'HomeController@delete');
+
+Route::post('/member/import', 'ExcelController@import');
+Route::get('/member/export', 'ExcelController@export');
+Route::get('/download/excel', 'ExcelController@download');

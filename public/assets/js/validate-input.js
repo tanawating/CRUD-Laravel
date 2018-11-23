@@ -3,6 +3,8 @@
 
 function reset_input()
 {
+    $('#file').removeClass('input-error');
+
     $('#prefix').removeClass('input-success');
     $('#sex').removeClass('input-success');
     $('#firstname').removeClass('input-success');
@@ -21,6 +23,11 @@ function reset_input()
     $('#lastname').val('');
     $('#email').val('');
     $('#phonenumber').val('');
+
+    $('#search_firstname').val('');
+    $('#search_lastname').val('');
+    $('#search_email').val('');
+    $('#search_phonenumber').val('');
 }
 
 function validate(prefix,sex,firstname,lastname)
