@@ -1,3 +1,12 @@
+<h1 align="center"> Laravel 5.6 (CRUD single page jquery+ajax)</h1>
+<h3 align="center">How to start project </h3> </br>
+<span>step 1. clone project </span> </br>
+<span>step 2. cd to path project </span> </br>
+<span>step 3. run command composer update </span> </br>
+<span>step 4. run command php artisan migrate </span> </br>
+<span>step 5. run command php artisan db:seed --class=UsersTableSeeder </span> </br>
+<span>step 6. run command php artisan serve </span> </br>
+<hr>
 <p align="center"><img src="https://laravel.com/assets/img/components/logo-laravel.svg"></p>
 
 <p align="center">
